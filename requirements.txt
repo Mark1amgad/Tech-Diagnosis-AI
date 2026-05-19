@@ -1,0 +1,4 @@
+# No external dependencies required except PySide6 for the UI.
+# This project uses strictly Python standard library components
+# for the core inference engine to ensure it remains lightweight.
+PySide6>=6.5.0

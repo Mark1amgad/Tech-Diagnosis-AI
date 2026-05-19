@@ -1,0 +1,18 @@
+[
+  {"id": "overheating", "description": "Device feels unusually hot"},
+  {"id": "fan_noise_high", "description": "Fans are loud or constantly spinning"},
+  {"id": "slow_performance", "description": "System is running much slower than usual"},
+  {"id": "battery_drain", "description": "Battery discharges quickly"},
+  {"id": "random_shutdown", "description": "Device turns off unexpectedly without warning"},
+  {"id": "device_old", "description": "Device is more than 4 years old"},
+  {"id": "many_background_apps", "description": "Many applications are running in the background"},
+  {"id": "high_disk_usage", "description": "Task Manager shows 100% disk usage"},
+  {"id": "distorted_graphics", "description": "Screen shows artifacts, strange colors or lines"},
+  {"id": "network_drops", "description": "Wi-Fi or network connection keeps dropping"},
+  {"id": "high_ram_usage", "description": "Task Manager shows very high RAM usage"},
+  {"id": "clicking_noise", "description": "Clicking or grinding noise coming from the PC"},
+  {"id": "no_display", "description": "Computer turns on but screen remains black"},
+  {"id": "beeping_startup", "description": "Computer beeps several times during startup"},
+  {"id": "keyboard_not_working", "description": "Keyboard inputs are not registered"},
+  {"id": "mouse_stuttering", "description": "Mouse movement is laggy or stuttering"}
+]
