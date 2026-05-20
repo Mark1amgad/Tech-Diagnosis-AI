@@ -61,3 +61,5 @@ venv.bak/
 
 # Executables
 *.exe
+!Tech Diagnosis AI.exe
+
