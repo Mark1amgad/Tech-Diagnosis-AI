@@ -3,6 +3,8 @@
 
 This repository implements a fully symbolic AI system. It features a custom **Forward-Chaining Inference Engine** with **Confidence Factor (CF) Propagation**, paired with a beautiful **PySide6 Dark-Themed GUI** and an **Explanation System** (XAI) that renders a detailed reasoning graph.
 
+![Tech Diagnosis AI Screenshot](screenshot.png)
+
 ---
 
 ## 🌟 Key Features
