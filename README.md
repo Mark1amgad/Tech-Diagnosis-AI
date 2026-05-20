@@ -39,7 +39,16 @@ KBS Project/
 
 ## 🚀 How to Run the Project
 
-### Option A: Run the Standalone Executable (Zero-Dependency)
+### 1. Clone the Repository Locally
+First, clone the repository to your local machine:
+```bash
+git clone https://github.com/Mark1amgad/Tech-Diagnosis-AI.git
+cd Tech-Diagnosis-AI
+```
+
+### 2. Choose How to Run
+
+#### Option A: Run the Standalone Executable (Zero-Dependency)
 No Python environment is required. Simply double-click the executable directly:
 ```bash
 "./Tech Diagnosis AI.exe"
@@ -75,5 +84,13 @@ The compiled single-file executable will be output to the `dist/` directory.
 
 ---
 
-## 📝 Academic context & Symbolic AI
+## 📝 Academic Context & Symbolic AI
 This project is built purely using **Symbolic AI (Rule-Based Expert Systems)** and does not rely on neural networks, machine learning models, or external cloud APIs. It is lightweight, 100% deterministic, and fits perfectly as an academic example of a Knowledge-Based System.
+
+This project was developed as a university project for the **Knowledge-Based Systems** course.
+
+### 👤 Author
+* **Mark Amgad Nassief Botros Mekhaiel**
+  * *Artificial Intelligence Engineering Student*
+  * *Faculty of Computer Science and Engineering*
+  * *New Mansoura University*
