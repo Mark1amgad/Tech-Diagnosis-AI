@@ -6,7 +6,7 @@ from PySide6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
                                QCheckBox, QTextEdit, QSplitter, QFrame, QGraphicsDropShadowEffect,
                                QProgressBar)
 from PySide6.QtCore import Qt, QThread, Signal, QPropertyAnimation, QEasingCurve, QSequentialAnimationGroup, QParallelAnimationGroup, QSize
-from PySide6.QtGui import QPalette, QColor, QFont
+from PySide6.QtGui import QPalette, QColor, QFont, QIcon
 
 from engine.inference_engine import ForwardChainingEngine
 from engine.explanation import ExplanationSystem
@@ -41,10 +41,11 @@ class InferenceWorker(QThread):
 
 
 class DiagnosisApp(QMainWindow):
-    def __init__(self, facts_path, rules_path):
+    def __init__(self, facts_path, rules_path, icon_path=None):
         super().__init__()
         self.facts_path = facts_path
         self.rules_path = rules_path
+        self.icon_path = icon_path
         
         self.engine = ForwardChainingEngine(self.rules_path)
         self.explainer = ExplanationSystem()
@@ -56,6 +57,9 @@ class DiagnosisApp(QMainWindow):
         self.setWindowTitle("Tech Diagnosis AI")
         self.resize(1200, 800)
         
+        if self.icon_path and os.path.exists(self.icon_path):
+            self.setWindowIcon(QIcon(self.icon_path))
+            
         self.setup_ui()
         self.setup_animations()
         
@@ -514,6 +518,14 @@ class DiagnosisApp(QMainWindow):
 
 
 def launch_app():
+    # Set Windows App User Model ID so the taskbar displays the custom icon properly
+    if sys.platform == 'win32':
+        import ctypes
+        try:
+            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID("NewMansouraUniversity.KBSProject.TechDiagnosisAI.1.0")
+        except Exception:
+            pass
+
     if getattr(sys, 'frozen', False):
         # Running as compiled executable
         base_dir = sys._MEIPASS
@@ -523,6 +535,7 @@ def launch_app():
         
     facts_path = os.path.join(base_dir, 'knowledge_base', 'facts.json')
     rules_path = os.path.join(base_dir, 'knowledge_base', 'rules.json')
+    icon_path = os.path.join(base_dir, 'icon.ico')
     
     app = QApplication(sys.argv + ['-platform', 'windows:darkmode=2'])
     app.setStyle('Fusion')
@@ -543,6 +556,6 @@ def launch_app():
     darkPalette.setColor(QPalette.HighlightedText, Qt.black)
     app.setPalette(darkPalette)
     
-    window = DiagnosisApp(facts_path, rules_path)
+    window = DiagnosisApp(facts_path, rules_path, icon_path=icon_path)
     window.show()
     sys.exit(app.exec())
