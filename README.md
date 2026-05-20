@@ -426,5 +426,8 @@ This separation means the inference engine is reusable across different diagnost
 
 ---
 
-**Author:** Mark Amgad Nassief Botros Mekhaiel
-**Program:** Artificial Intelligence Engineering, Faculty of Computer Science and Engineering, New Mansoura University
+### Author
+* **Mark Amgad Nassief Botros Mekhaiel**
+  * *Artificial Intelligence Engineering Student*
+  * *Faculty of Computer Science and Engineering*
+  * *New Mansoura University*
