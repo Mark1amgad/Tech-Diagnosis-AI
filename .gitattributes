@@ -1,0 +1,9 @@
+# GitHub Linguist configuration
+# Excludes IDE skill/vendor directories from language statistics.
+# These directories contain AI coding assistant skill definitions,
+# not project source code. The core implementation is Python.
+
+.agents/ linguist-vendored
+.claude/ linguist-vendored
+.qoder/ linguist-vendored
+.windsurf/ linguist-vendored
